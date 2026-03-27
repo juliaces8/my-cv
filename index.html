@@ -10,9 +10,9 @@
     <style>
         :root {
             --navy-blue: #1A2238; 
-            --deep-brown: #3E2723; 
+            --accent-brown: #5D4037; /* Rich Espresso Brown */
             --off-black: #121212; 
-            --light-bg: #F5F5F7; 
+            --light-bg: #F8F7F5; 
             --text-light: #FFFFFF;
         }
 
@@ -27,10 +27,10 @@
             background-color: var(--navy-blue);
             color: var(--text-light);
             padding: 90px 0;
-            border-bottom: 8px solid var(--deep-brown);
+            border-bottom: 10px solid var(--accent-brown);
         }
 
-        .header-name { font-weight: 700; font-size: 3.2rem; letter-spacing: -1px; }
+        .header-name { font-weight: 700; font-size: 3.2rem; }
         .header-title { font-weight: 400; font-size: 1.5rem; opacity: 0.9; }
 
         h2.section-title {
@@ -48,7 +48,7 @@
             position: absolute;
             width: 60px;
             height: 4px;
-            background-color: var(--deep-brown);
+            background-color: var(--accent-brown);
             bottom: 0;
             left: 0;
         }
@@ -62,7 +62,7 @@
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             margin-bottom: 25px;
-            border-left: 6px solid var(--navy-blue);
+            border-left: 6px solid var(--accent-brown);
         }
 
         .skill-badge {
@@ -78,21 +78,21 @@
         }
         
         .skill-badge:hover {
-            background-color: var(--deep-brown);
+            background-color: var(--accent-brown);
             transform: translateY(-3px);
         }
 
         .hobby-box {
             background: #fff;
-            border: 1px dashed var(--deep-brown);
+            border: 1px dashed var(--accent-brown);
             padding: 15px;
             border-radius: 8px;
             display: inline-block;
         }
 
         footer { background-color: var(--off-black); color: var(--text-light); padding: 60px 0; }
-        footer a { color: var(--text-light); text-decoration: none; opacity: 0.8; font-weight: 600; }
-        footer a:hover { opacity: 1; color: #baa44a; }
+        footer a { color: var(--text-light); text-decoration: none; font-weight: 600; }
+        footer a:hover { color: #D4AF37; }
     </style>
 </head>
 <body>
@@ -100,7 +100,7 @@
     <header class="header-section text-center">
         <div class="container">
             <h1 class="header-name">Julia Choi, CPA</h1>
-            <p class="header-title">Principal at SimekScott | Credits & Incentives Leader | Software Engineer</p>
+            <p class="header-title">Principal at SimekScott | Tax Strategy Leader | Software Engineer</p>
             <div class="mt-4">
                 <span class="badge bg-light text-dark px-3 py-2 me-2">Chicago, IL</span>
                 <span class="badge bg-light text-dark px-3 py-2">Licensed CPA</span>
@@ -122,22 +122,20 @@
                         practice at <strong>SimekScott</strong>. 
                     </p>
                     <p>
-                        My career is built on a foundation of "Big Four" excellence, having served in National 
-                        Credits and Incentives teams at <strong>PwC</strong> and <strong>Deloitte Tax</strong>, 
-                        as well as leadership roles at <strong>Alvarez & Marsal</strong> and <strong>BDO</strong>. 
-                        I specialize in developing customized strategies for Fortune 100 companies to 
-                        maximize and monetize business incentives.
+                        I am dedicated to developing customized strategies for clients of all sizes—from high-growth 
+                        enterprises to Fortune 100 companies—helping them identify, maximize, and monetize 
+                        <strong>tax consulting</strong> and incentive opportunities.
                     </p>
                     <p>
-                        Driven by a passion for innovation, I recently graduated from the 
-                        <strong>University of Chicago Software Engineering Boot Camp</strong>. I am now 
-                        integrating advanced technical capabilities—from Python to RESTful APIs—into 
-                        high-level financial consulting.
+                        Having served in National teams at <strong>PwC, Deloitte, A&M, and BDO</strong>, I bring a 
+                        rigorous approach to tax strategy. Recently, I <strong>completed</strong> the 
+                        <strong>University of Chicago Software Engineering Boot Camp</strong>, allowing me to 
+                        integrate modern technical solutions into complex tax-incentive workflows.
                     </p>
                     <div class="mt-4 pt-2 border-top">
-                        <p class="mb-1"><strong>Languages:</strong> English (Native/Fluent), Korean (Native/Fluent), Japanese (Conversational)</p>
+                        <p class="mb-1"><strong>Languages:</strong> English, Korean, Japanese</p>
                         <div class="hobby-box mt-2">
-                            <span class="hobby-text small"><strong>365 Goal:</strong> Thinking about how to lose weight every single day.</span>
+                            <span class="hobby-text small"><strong>365 Goal:</strong> Thinking about how to lose weight every single day. 🏃🏻‍♀️🧐</span>
                         </div>
                     </div>
                 </div>
@@ -149,41 +147,35 @@
                 <div class="row">
                     <div class="col-lg-7">
                         <h2 class="section-title">Career Milestones</h2>
-                        
                         <div class="timeline-item">
-                            <h5 class="fw-bold text-primary">Principal</h5>
+                            <h5 class="fw-bold" style="color:var(--accent-brown)">Principal</h5>
                             <p class="mb-1"><strong>SimekScott</strong> | Chicago, IL</p>
                             <p class="small text-muted">Leading the State and Local Credits & Incentives practice.</p>
                         </div>
-
                         <div class="timeline-item">
-                            <h5 class="fw-bold">Director / Senior Manager Roles</h5>
-                            <p class="mb-1"><strong>PwC, Deloitte, Alvarez & Marsal, BDO</strong></p>
-                            <p class="small text-muted">Specialized in multimillion-dollar incentive packages for major expansions and relocations.</p>
+                            <h5 class="fw-bold">National Credits & Incentives Teams</h5>
+                            <p class="mb-1"><strong>PwC, Deloitte Tax, A&M, and BDO</strong></p>
+                            <p class="small text-muted">Specialized in multimillion-dollar incentive packages and strategic planning.</p>
                         </div>
-
                         <div class="timeline-item">
-                            <h5 class="fw-bold">Investment Banking & IPO Support</h5>
-                            <p class="small text-muted">Assisted with the initial public offering of a major Korean manufacturing company.</p>
+                            <h5 class="fw-bold">Licensed CPA</h5>
+                            <p class="small text-muted">State of Illinois</p>
                         </div>
                     </div>
 
                     <div class="col-lg-5">
                         <h2 class="section-title">Education</h2>
-                        
                         <div class="timeline-item">
                             <h5 class="fw-bold">Master of Accountancy</h5>
                             <p class="mb-0">DePaul University</p>
                         </div>
-
                         <div class="timeline-item">
                             <h5 class="fw-bold">Software Engineering Certification</h5>
                             <p class="mb-0">University of Chicago Boot Camp</p>
                         </div>
-
                         <div class="timeline-item">
-                            <h5 class="fw-bold">Bachelor's Degree</h5>
-                            <p class="mb-0">University of Illinois at Urbana-Champaign</p>
+                            <h5 class="fw-bold">B.S. in Hotel Administration</h5>
+                            <p class="mb-0">University of Nevada Las Vegas (UNLV)</p>
                         </div>
                     </div>
                 </div>
@@ -194,10 +186,9 @@
             <h2 class="section-title d-inline-block">Core Expertise</h2>
             <div class="row mt-4">
                 <div class="col-md-6 mb-4">
-                    <h5 class="fw-bold text-muted mb-3">FINANCIAL LEADERSHIP</h5>
-                    <span class="skill-badge">CPA (Illinois)</span>
+                    <h5 class="fw-bold text-muted mb-3">TAX STRATEGY & CREDITS</h5>
                     <span class="skill-badge">Credits & Incentives</span>
-                    <span class="skill-badge">Strategic Tax Consulting</span>
+                    <span class="skill-badge">Tax Consulting</span>
                     <span class="skill-badge">Monetization Strategies</span>
                     <span class="skill-badge">Corporate Relocation</span>
                 </div>
@@ -208,7 +199,6 @@
                     <span class="skill-badge">JavaScript</span>
                     <span class="skill-badge">Bootstrap 5</span>
                     <span class="skill-badge">RESTful API Design</span>
-                    <span class="skill-badge">Git Version Control</span>
                 </div>
             </div>
         </section>
@@ -219,7 +209,7 @@
             <div class="row align-items-center">
                 <div class="col-md-6">
                     <h4 class="fw-bold">Julia Choi, CPA</h4>
-                    <p class="opacity-75">Bridging the gap between Finance and Technology.</p>
+                    <p class="opacity-75">Bridging the gap between Tax Advisory and Technology.</p>
                 </div>
                 <div class="col-md-6 text-md-end">
                     <a href="mailto:your.email@example.com" class="btn btn-outline-light me-2">Email Me</a>
@@ -227,9 +217,7 @@
                 </div>
             </div>
             <hr class="my-5 opacity-25">
-            <div class="text-center small opacity-50">
-                © 2026 Julia Choi. Built with HTML, CSS, and Bootstrap.
-            </div>
+            <div class="text-center small opacity-50">© 2026 Julia Choi.</div>
         </div>
     </footer>
 
