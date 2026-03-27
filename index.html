@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[YOUR NAME] - Personal Webpage & CV</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Define the Custom Color Palette */
+        :root {
+            --navy-blue: #1A2238; /* Main background/headers */
+            --deep-brown: #3E2723; /* Accent/buttons */
+            --off-black: #121212; /* Text color */
+            --light-bg: #F5F5F7; /* Secondary background */
+            --text-light: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--off-black);
+            background-color: #FFFFFF;
+        }
+
+        /* --- Header / Hero Section --- */
+        .header-section {
+            background-color: var(--navy-blue);
+            color: var(--text-light);
+            padding: 100px 0;
+            border-bottom: 8px solid var(--deep-brown);
+        }
+
+        .header-name {
+            font-weight: 700;
+            font-size: 3.5rem;
+            letter-spacing: -1px;
+        }
+
+        .header-title {
+            font-weight: 400;
+            font-size: 1.5rem;
+            opacity: 0.9;
+        }
+
+        /* --- Global Styling --- */
+        h2.section-title {
+            color: var(--navy-blue);
+            font-weight: 700;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        h2.section-title::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 4px;
+            background-color: var(--deep-brown);
+            bottom: 0;
+            left: 0;
+        }
+
+        /* --- "About Me" Section --- */
+        .about-section {
+            padding: 80px 0;
+        }
+
+        /* --- "Experience/Education" Section --- */
+        .timeline-section {
+            background-color: var(--light-bg);
+            padding: 80px 0;
+        }
+
+        .timeline-item {
+            background-color: #FFFFFF;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border-left: 5px solid var(--navy-blue);
+        }
+
+        .timeline-date {
+            color: var(--deep-brown);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* --- "Skills" Section --- */
+        .skills-section {
+            padding: 80px 0;
+        }
+
+        .skill-badge {
+            background-color: var(--navy-blue);
+            color: var(--text-light);
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 50px;
+            margin: 5px;
+            display: inline-block;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--off-black);
+            color: var(--text-light);
+            padding: 50px 0;
+            margin-top: auto;
+        }
+
+        footer a {
+            color: var(--text-light);
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        footer a:hover {
+            opacity: 1;
+            color: #baa44a; /* A subtle gold highlight on hover */
+        }
+    </style>
+</head>
+<body class="d-flex flex-column h-100">
+
+    <header class="header-section text-center">
+        <div class="container">
+            <h1 class="header-name">[YOUR FULL NAME]</h1>
+            <p class="header-title">[YOUR PROFESSIONAL TITLE, e.g., Junior Software Engineer]</p>
+            <p class="lead mt-3 mx-auto text-white-50" style="max-width: 700px;">
+                [A quick one-sentence summary that strikes the balance between 
+                professionalism and personality, e.g., "Driven developer with a passion 
+                for clean code, classic literature, and efficient problem-solving."]
+            </p>
+        </div>
+    </header>
+
+    <main class="flex-shrink-0">
+        <section class="about-section container">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center mb-4 mb-md-0">
+                    <img src="https://via.placeholder.com/250" alt="[YOUR NAME] Profile" 
+                         class="rounded-circle img-thumbnail shadow-sm" style="width: 250px; height: 250px; object-fit: cover;">
+                </div>
+                <div class="col-md-8">
+                    <h2 class="section-title">Introducing Myself</h2>
+                    <p class="lead text-muted mb-4">
+                        [This section is where you show your personality while staying professional.
+                        What drives you? What makes you unique? How do your interests 
+                        outside of tech influence your work?]
+                    </p>
+                    <p>
+                        [Write a paragraph here detailing your professional journey, key 
+                        motivations, and the type of work environment where you thrive. 
+                        Keep it engaging and authentic.]
+                    </p>
+                    <p>
+                        [A second paragraph can highlight something you're proud of—a personal 
+                        project, a significant learning milestone, or your overarching goal 
+                        as a developer.]
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="timeline-section">
+            <div class="container">
+                <h2 class="section-title">Experience & Education</h2>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h4 class="text-uppercase fw-bold mb-4 text-muted">Professional Path</h4>
+                        
+                        <div class="timeline-item">
+                            <span class="timeline-date">[MONTH, YEAR] - Present</span>
+                            <h5 class="fw-bold mt-1">[YOUR JOB TITLE]</h5>
+                            <p class="text-muted mb-2">[COMPANY NAME], [LOCATION]</p>
+                            <ul>
+                                <li>[Key responsibility or accomplishment 1]</li>
+                                <li>[Key responsibility or accomplishment 2]</li>
+                                <li>[Key responsibility or accomplishment 3]</li>
+                            </ul>
+                        </div>
+
+                        <div class="timeline-item">
+                            <span class="timeline-date">[MONTH, YEAR] - [MONTH, YEAR]</span>
+                            <h5 class="fw-bold mt-1">[PREVIOUS JOB TITLE]</h5>
+                            <p class="text-muted mb-2">[PREVIOUS COMPANY], [LOCATION]</p>
+                            <ul>
+                                <li>[Key responsibility or accomplishment 1]</li>
+                                <li>[Key responsibility or accomplishment 2]</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <h4 class="text-uppercase fw-bold mb-4 text-muted">Academic Background</h4>
+                        
+                        <div class="timeline-item">
+                            <span class="timeline-date">[YEAR] - [YEAR]</span>
+                            <h5 class="fw-bold mt-1">[DEGREE NAME, e.g., BSc in Computer Science]</h5>
+                            <p class="text-muted mb-0">[UNIVERSITY NAME], [LOCATION]</p>
+                            <p class="small text-muted">[Optional: Mention specialized coursework or dissertation topic]</p>
+                        </div>
+
+                        <div class="timeline-item">
+                            <span class="timeline-date">[YEAR] - [YEAR]</span>
+                            <h5 class="fw-bold mt-1">[CERTIFICATION OR DIPOLMA, e.g., Full-Stack Boot Camp]</h5>
+                            <p class="text-muted mb-0">[INSTITUTION NAME]</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills-section container text-center">
+            <h2 class="section-title d-inline-block">Technical Expertise</h2>
+            <div class="mt-4">
+                <span class="skill-badge">[PYTHON]</span>
+                <span class="skill-badge">[DJANGO]</span>
+                <span class="skill-badge">[MARIADB/SQL]</span>
+                <span class="skill-badge">[HTML5 & CSS3]</span>
+                <span class="skill-badge">[JAVASCRIPT]</span>
+                <span class="skill-badge">[BOOTSTRAP]</span>
+                <span class="skill-badge">[GIT & GITHUB]</span>
+                <span class="skill-badge">[REST APIs]</span>
+                <span class="skill-badge">[DOCKER]</span>
+                <span class="skill-badge">[LINUX]</span>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center text-md-start">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <h5 class="fw-bold mb-3">Connect with [YOUR NAME]</h5>
+                    <p class="small mb-0 opacity-75">
+                        Feel free to reach out—I'm always open to discussing 
+                        new opportunities or sharing insights.
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="mailto:[YOUR.EMAIL@email.com]" class="me-3">Email</a>
+                    <a href="https://linkedin.com/in/[YOUR-LINKEDIN-USERNAME]" class="me-3" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/[YOUR-GITHUB-USERNAME]" target="_blank">GitHub</a>
+                </div>
+            </div>
+            <hr class="mt-4 mb-3 opacity-25">
+            <div class="row">
+                <div class="col text-center">
+                    <p class="small mb-0 text-white-50">© 2024 [YOUR NAME]. Professional Webpage.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bundle.min.js"></script>
+</body>
+</html>
