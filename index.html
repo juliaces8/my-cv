@@ -10,10 +10,19 @@
     <style>
         :root {
             --navy-blue: #1A2238; 
-            --accent-brown: #C5A07D; /* Lighter, soft Sandy Carmel */
+            --accent-brown: #C5A07D; /* Soft Sandy Carmel */
+            --dark-mocha: #8C6D4F;   /* Darker Mocha for headers */
             --off-black: #121212; 
             --light-bg: #FDFCFB; 
             --text-light: #FFFFFF;
+        }
+
+        /* MOBILE OVERFLOW FIXES */
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
         }
 
         body {
@@ -23,15 +32,26 @@
             line-height: 1.6;
         }
 
+        /* Ensure rows don't "poke out" on mobile */
+        .row {
+            margin-right: 0;
+            margin-left: 0;
+        }
+
         .header-section {
             background-color: var(--navy-blue);
             color: var(--text-light);
-            padding: 90px 0;
+            padding: 60px 15px; /* Adjusted for mobile */
             border-bottom: 10px solid var(--accent-brown);
         }
 
-        .header-name { font-weight: 700; font-size: 3.2rem; }
-        .header-title { font-weight: 400; font-size: 1.5rem; opacity: 0.9; }
+        @media (min-width: 768px) {
+            .header-section { padding: 90px 0; }
+            .header-name { font-size: 3.2rem; }
+        }
+
+        .header-name { font-weight: 700; font-size: 2.2rem; }
+        .header-title { font-weight: 400; font-size: 1.2rem; opacity: 0.9; }
 
         h2.section-title {
             color: var(--navy-blue);
@@ -53,8 +73,13 @@
             left: 0;
         }
 
-        .about-section { padding: 80px 0; }
-        .timeline-section { background-color: var(--light-bg); padding: 80px 0; }
+        .job-title-highlight {
+            color: var(--dark-mocha);
+            font-weight: 700;
+        }
+
+        .about-section { padding: 60px 0; }
+        .timeline-section { background-color: var(--light-bg); padding: 60px 0; }
 
         .timeline-item {
             background-color: #FFFFFF;
@@ -69,12 +94,13 @@
             background-color: var(--navy-blue);
             color: var(--text-light);
             font-weight: 600;
-            padding: 10px 20px;
+            padding: 10px 18px;
             border-radius: 50px;
-            margin: 6px;
+            margin: 5px;
             display: inline-block;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             transition: 0.3s;
+            word-break: break-word; /* Mobile fix for long words */
         }
         
         .skill-badge:hover {
@@ -85,12 +111,13 @@
         .hobby-box {
             background: #fff;
             border: 1px dashed var(--accent-brown);
-            padding: 15px;
+            padding: 12px;
             border-radius: 8px;
             display: inline-block;
+            max-width: 100%;
         }
 
-        footer { background-color: var(--off-black); color: var(--text-light); padding: 60px 0; }
+        footer { background-color: var(--off-black); color: var(--text-light); padding: 50px 0; }
         footer a { color: var(--text-light); text-decoration: none; font-weight: 600; }
         footer a:hover { color: var(--accent-brown); }
     </style>
@@ -100,10 +127,10 @@
     <header class="header-section text-center">
         <div class="container">
             <h1 class="header-name">Julia Choi, CPA</h1>
-            <p class="header-title">Principal at SimekScott | Tax Credits & Incentives Leader | Software Engineer</p>
+            <p class="header-title px-2">Principal at SimekScott | Tax Credits & Incentives Leader | Software Engineer</p>
             <div class="mt-4">
-                <span class="badge bg-light text-dark px-3 py-2 me-2">Chicago, IL</span>
-                <span class="badge bg-light text-dark px-3 py-2">Licensed CPA</span>
+                <span class="badge bg-light text-dark px-3 py-2 me-2 mb-2">Chicago, IL</span>
+                <span class="badge bg-light text-dark px-3 py-2 mb-2">Licensed CPA</span>
             </div>
         </div>
     </header>
@@ -113,7 +140,7 @@
             <div class="row align-items-center">
                 <div class="col-md-4 text-center mb-5 mb-md-0">
                     <img src="https://ui-avatars.com/api/?name=Julia+Choi&background=1A2238&color=fff&size=300" alt="Julia Choi" 
-                         class="rounded-circle img-thumbnail shadow" style="width: 280px; height: 280px;">
+                         class="rounded-circle img-thumbnail shadow" style="width: 250px; height: 250px; object-fit: cover;">
                 </div>
                 <div class="col-md-8">
                     <h2 class="section-title">Professional Profile</h2>
@@ -123,8 +150,8 @@
                     </p>
                     <p>
                         I am dedicated to developing customized strategies for clients of all sizes—from 
-                        high-growth enterprises to Fortune 100 companies—helping them identify, maximize, and monetize <strong>meaningful</strong> 
-                        tax credit and incentive opportunities.
+                        high-growth enterprises to Fortune 100 companies—helping them <strong>identify, maximize, and monetize</strong> 
+                        meaningful tax credit and incentive opportunities.
                     </p>
                     <p>
                         Having served in National teams at <strong>PwC, Deloitte, A&M, and BDO</strong>, I bring a 
@@ -148,7 +175,7 @@
                     <div class="col-lg-7">
                         <h2 class="section-title">Career Milestones</h2>
                         <div class="timeline-item">
-                            <h5 class="fw-bold" style="color:var(--accent-brown)">Principal</h5>
+                            <h5 class="job-title-highlight">Principal</h5>
                             <p class="mb-1"><strong>SimekScott</strong> | Chicago, IL</p>
                             <p class="small text-muted">Leading the State and Local Tax Credits & Incentives practice.</p>
                         </div>
@@ -185,9 +212,9 @@
         <section class="skills-section container text-center py-5">
             <h2 class="section-title d-inline-block">Core Expertise</h2>
             <div class="row mt-4">
-                <div class="col-md-6 mb-4 text-center">
+                <div class="col-md-6 mb-5 text-center">
                     <h5 class="job-title-highlight mb-3">TAX STRATEGY & ADVISORY</h5>
-                    <div class="d-flex flex-wrap">
+                    <div class="d-flex flex-wrap justify-content-center">
                         <span class="skill-badge">Tax Credit Refund</span>
                         <span class="skill-badge">Tax Incentive Package</span>
                         <span class="skill-badge">C&I Compliance</span>
@@ -196,9 +223,10 @@
                         <span class="skill-badge">Site Selection & Optimization</span>
                     </div>
                 </div>
-                <div class="col-md-6 mb-4 text-center">
+
+                <div class="col-md-6 mb-5 text-center">
                     <h5 class="job-title-highlight mb-3">ADVANCED TECHNICAL CAPABILITIES</h5>
-                    <div class="d-flex flex-wrap">
+                    <div class="d-flex flex-wrap justify-content-center">
                         <span class="skill-badge">Cloud Infrastructure (Supabase)</span>
                         <span class="skill-badge">Relational Data Architecture (MariaDB)</span>
                         <span class="skill-badge">RESTful API Design & Integration</span>
@@ -214,11 +242,11 @@
     <footer class="text-center text-md-start">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-6">
+                <div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
                     <h4 class="fw-bold">Julia Choi, CPA</h4>
                     <p class="opacity-75">Bridging the gap between Tax Advisory and Technology.</p>
                 </div>
-                <div class="col-md-6 text-md-end">
+                <div class="col-md-6 text-center text-md-end">
                     <a href="mailto:juliachoi@example.com" class="btn btn-outline-light me-2">Email Me</a>
                     <a href="https://www.linkedin.com/in/julia-choi-cpa-2113b858" target="_blank" class="btn btn-primary">LinkedIn</a>
                 </div>
